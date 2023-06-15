@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --main-gradient: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --seconde-gradient: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: fit-content;
+        height: fit-content;
+        border-radius: 2em;
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 140px auto;
+        box-shadow: 7px 20px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .side{
+        width: 50%;
+        border-radius: 2em;
+    }
+
+    .active.side{
+        padding: 1em;
+    }
+
+    .active.side .circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: var(--seconde-gradient);
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        text-align: center;
+        color: var(--light-lavender);
+    }
+
+    .active.side p{
+        text-align: center;
+        color: var(--light-lavender);
+        font-weight: 500;
+        max-width: 300px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1199px){
+    .active.side{
+        border-radius: 0 0 2em 2em;
+    }
+    .active.side .circle{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-image: var(--seconde-gradient);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+    color: var(--light-lavender);
+    }
+    .active.side p{
+        text-align: center;
+        color: var(--light-lavender);
+        font-weight: 500;
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+.active.side{
+    background-image: var(--main-gradient);
+    padding: 2em;
+}
+
+.active.side .circle span:first-of-type{
+    color: var(--white);
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.active.side h3{
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--light-lavender);
+    font-weight: 500;
+}
+
+.active.side h2{
+    text-align: center;
+    margin: 30px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.active.side p{
+    text-align: center;
+    color: var(--light-lavender);
+    font-weight: 500;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* ----------------------------------------------- */
+
+.seconde.side{
+    padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.seconde.side h3{
+    margin: 0 0 1.5em;
+}
+
+.seconde.side .box{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: .5em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seconde.side .box .skill-and-icon{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.seconde.side .box .skill-and-icon img{
+    padding-right: 1em;
+}
+
+.seconde.side .box .score{
+    color: var(--light-lavender);
+}
+
+.seconde.side .box .score :first-child{
+    color: var(--dark-gray-blue);
+    padding-right: .5em;
+    font-weight: 700;
+}
+
+.box-1{
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.box-2{
+    color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.box-3{
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.box-4{
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.seconde.side button{
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    border: none;
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.seconde.side button:hover{
+    background-image: var(--main-gradient);
+    background-color: none;
+}
